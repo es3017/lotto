@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoosier Lottery Numbers</title>
+</head>
+<body>
+    <h1>For Loop</h1>
+    <div id="part1Numbers"></div>
+
+    <h1>While Loop</h1>
+    <div id="part2Numbers"></div>
+
+    <script>
+        let part1Numbers = "";
+        for (let i = 0; i < 6; i++) {
+            const randomNumber = Math.floor(Math.random() * 49) + 1;
+            part1Numbers += randomNumber + " ";
+        }
+        document.getElementById("part1Numbers").textContent = "Numbers: " + part1Numbers;
+
+        let part2Numbers = "";
+        let count = 0;
+        while (count < 6) {
+            const randomNumber = Math.floor(Math.random() * 49) + 1;
+            part2Numbers += randomNumber + " ";
+            count++;
+        }
+        document.getElementById("part2Numbers").textContent = "Numbers: " + part2Numbers;
+    </script>
+</body>
+</html>
